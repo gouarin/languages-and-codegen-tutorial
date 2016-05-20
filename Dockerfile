@@ -1,6 +1,8 @@
 FROM andrewosh/binder-base
 
 USER root
+RUN /bin/bash -c "apt-get search opencl"
+
 RUN apt-get update && apt-get install -y \
     opencl-headers \
     beignet beignet-dev \

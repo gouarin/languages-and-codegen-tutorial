@@ -6,7 +6,8 @@ RUN /bin/bash -c "apt-cache search opencl"
 RUN apt-get update && apt-get install -y \
     opencl-headers \
     beignet beignet-dev \
-    beignet-opencl-icd
+    libcublas7.5
+
     
 USER main
 

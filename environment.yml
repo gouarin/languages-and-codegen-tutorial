@@ -3,6 +3,7 @@ name: loopy
 dependencies:
   - python=3.5
   - numpy
+  - mako
   - matplotlib
   - scipy
   - pandas

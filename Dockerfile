@@ -6,7 +6,7 @@ RUN /bin/bash -c "apt-cache search opencl"
 RUN apt-get update && apt-get install -y \
     opencl-headers \
     beignet beignet-dev \
-    libcublas7.5
+    libcublas
 
     
 USER main

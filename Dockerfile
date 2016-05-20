@@ -1,6 +1,8 @@
 FROM andrewosh/binder-base
 
-RUN apt-get install  beignet beignet-dev
+USER root
+RUN apt-get update && apt-get install -y \
+    beignet beignet-dev
 
 USER main
 

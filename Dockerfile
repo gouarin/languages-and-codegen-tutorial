@@ -1,21 +1,17 @@
-FROM andrewosh/binder-base
+FROM andrewosh/binder-python-3.5
 
 USER root
-RUN /bin/bash -c "apt-cache search opencl"
 
 RUN apt-get update && apt-get install -y \
     opencl-headers \
-    beignet beignet-dev \
-    libcublas
-
-    
+    beignet beignet-dev
+   
 USER main
 
 ADD environment.yml /home/main/
 
 RUN conda env create -f environment.yml
 RUN /bin/bash -c "source activate loopy"
-RUN pip install pyopencl
-RUN git clone https://github.com/inducer/loopy.git
-RUN cd loopy; python setup.py install
+#RUN pip install pyopencl
+#RUN pip install loo.py
 

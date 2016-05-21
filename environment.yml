@@ -9,3 +9,5 @@ dependencies:
   - pandas
   - ipython
   - ipython-notebook
+  - pyopencl
+  - loo.py

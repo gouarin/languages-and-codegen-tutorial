@@ -13,6 +13,6 @@ ADD environment.yml /home/main/
 
 RUN conda env create -f environment.yml
 RUN /bin/bash -c "source activate loopy && ipython kernelspec install-self --user"
-RUN pip install pyopencl
-RUN pip install loo.py
+#RUN pip install pyopencl
+#RUN pip install loo.py
 
